@@ -1,0 +1,274 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+.boxchat {
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 60rem; */
+    width: 23rem;
+}
+
+.arrow_boxchat {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #0EC879;
+}
+
+.box_arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.div__img {
+    display: flex;
+    align-items: center;
+}
+
+.name__peo {
+    margin-left: 10px;
+}
+
+#go_more {
+    margin-left: 20px;
+}
+
+.image__peo {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+
+/* =========== backk ========= */
+
+.box_chat {
+    width: 50%;
+    height: 29%;
+    /* margin-left: 40%; */
+    /* margin-top: 35%; */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(199, 198, 207);
+}
+
+.chat-thread {
+    margin: 50px auto 3px auto;
+    padding: 0 30px 0 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.chat-thread li {
+    clear: both;
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    margin-top: 20px;
+    font: 16px/20px "Noto Sans", sans-serif;
+    border-radius: 100px;
+    background-color: rgb(88, 88, 88);
+}
+
+
+/* Chat - Avatar */
+
+.chat-thread li:before {
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    content: "";
+}
+
+
+/* Chat - Speech Bubble Arrow */
+
+.chat-thread li:after {
+    top: 15px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 15px solid rgb(88, 88, 88);
+}
+
+.chat-thread li:nth-child(odd) {
+    float: right;
+    margin-right: 70px;
+    color: pink;
+}
+
+.chat-thread li:nth-child(odd):before {
+    right: -80px;
+    /* background-image: url(/chat_app/static/img/my.jpg); */
+}
+
+.chat-thread li:nth-child(odd):after {
+    border-right: 15px solid transparent;
+    right: -10px;
+}
+
+.chat-thread li:nth-child(even) {
+    float: left;
+    margin-left: 80px;
+    color: #0EC879;
+}
+
+.chat-thread li:nth-child(even):before {
+    left: -80px;
+    /* background-image: url(/chat_app/static/img/my.jpg); */
+}
+
+.chat-thread li:nth-child(even):after {
+    border-left: 15px solid transparent;
+    left: -10px;
+}
+
+.chat-window {
+    bottom: 18px;
+    margin-left: 10rem;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.chat-window i {
+    margin-left: 1rem;
+}
+
+.chat-window-message {
+    width: 100%;
+    height: 30px;
+    padding-left: 30px;
+    font: 32px/48px "Noto Sans", sans-serif;
+    background: rgba(112, 112, 112, 0.219);
+    color: #020202;
+    border-radius: 100px;
+    border: 0;
+    border-bottom: 1px solid rgba(25, 147, 147, 0.2);
+    outline: none;
+    font-size: 20px;
+    margin-left: -25px;
+}
+
+
+/* ''''''''''''show '''''''''''''''' */
+
+.chat-window_show {
+    font-size: 15px;
+}
+
+
+/* / Small screens */
+
+@media all and (max-width: 767px) {
+    .chat-thread {
+        width: 50%;
+        height: 260px;
+    }
+    .chat-window {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+
+/* Medium and large screens */
+
+@media all and (min-width: 768px) {
+    .chat-thread {
+        width: 100%;
+        height: 320px;
+    }
+    .chat-window {
+        left: 25%;
+        width: 50%;
+    }
+}
+
+
+/* @keyframes show-chat-even {
+    0% {
+        margin-left: -480px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-moz-keyframes show-chat-even {
+    0% {
+        margin-left: -480px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes show-chat-even {
+    0% {
+        margin-left: -480px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes show-chat-odd {
+    0% {
+        margin-right: -480px;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+@-moz-keyframes show-chat-odd {
+    0% {
+        margin-right: -480px;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+@-webkit-keyframes show-chat-odd {
+    0% {
+        margin-right: -480px;
+    }
+    100% {
+        margin-right: 0;
+    }
+} */
+
+.Hup_kk {
+    background-color: rgba(88, 88, 88, 0.014);
+    color: rgb(0, 4, 255);
+    float: right;
+    position: fixed;
+    margin-left: 30rem;
+    display: none;
+}
+
+.Hup_kk:hover {
+    background-color: #0EC879;
+    display: block;
+}
+
+.Hup_kk li {
+    margin-top: 10px;
+}
+
+.Hup_kk li:hover {
+    background-color: #6b6b6b0e;
+}
+
+#Hup_kk {
+    /* display: none; */
+}
+
+#Hup_kk:target {
+    display: block;
+}

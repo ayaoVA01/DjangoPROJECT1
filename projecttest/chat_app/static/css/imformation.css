@@ -1,0 +1,70 @@
+    /* ==========imfor mations ========== */
+    
+    .box_information {}
+    
+    h4 {
+        width: 18rem;
+        background-color: blue;
+        color: wheat;
+        text-align: center;
+    }
+    
+    .imformation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    input {
+        width: 10rem;
+        border: none;
+        outline: none;
+        margin-left: 1rem;
+        padding: .6rem;
+        text-shadow: 0 2px 4px rgb(138, 138, 138);
+    }
+    
+    .li_infor {
+        width: 25rem;
+        height: 3rem;
+        border-bottom: 1px solid black;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        display: flex;
+    }
+    
+    .information_list2 {
+        margin-left: 10rem;
+    }
+    
+    .li_infor2 {
+        width: 25rem;
+        height: 3rem;
+        border-bottom: 1px solid black;
+        text-align: center;
+    }
+    
+    .li_infor3 {
+        margin-top: 4rem;
+        text-align: center;
+    }
+    
+    button {
+        margin-left: 10rem;
+    }
+    
+    img {
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        background-color: aqua;
+    }
+    
+    p {
+        color: rgba(82, 80, 80, 0.626);
+        margin-top: -.3px;
+    }

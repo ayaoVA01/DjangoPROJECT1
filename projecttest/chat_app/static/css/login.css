@@ -1,0 +1,82 @@
+.box_login {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.sign_up h4 {
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(0, 12, 22);
+}
+
+.login_div {
+    margin-top: 3rem;
+}
+
+.email_pass {
+    display: flex;
+    flex-direction: column;
+}
+
+.email_pass input,
+.login {
+    width: 15rem;
+    font-size: 15px;
+    margin-top: 1rem;
+    padding: 10px;
+    border: none;
+    border-bottom: .3px solid black;
+    outline: none;
+    text-shadow: 0 2px 4px rgb(138, 138, 138);
+}
+
+.login {
+    width: 16rem;
+}
+
+.login:hover {
+    background-color: antiquewhite;
+}
+
+.class i {
+    margin-left: -25px;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.class input {
+    background-color: rgb(168, 136, 87);
+}
+
+.log p {
+    margin-top: 1rem;
+    margin-left: 7rem;
+    margin-bottom: 2rem;
+}
+
+.log_with {
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
+
+.login_icon {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 30px;
+}
+
+.login_icon i {
+    margin-left: 1rem;
+}
+
+.donot a {
+    color: blue;
+}

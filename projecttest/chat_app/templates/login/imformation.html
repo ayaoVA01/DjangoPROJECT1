@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/Imformation.css' %}">
+    <title>Imformation</title>
+</head>
+
+<body>
+
+    <div class="box_information">
+        <div>
+            <h4>Please input your some imformatons</h4>
+        </div>
+
+
+        <form method=POST action="{% url 'useImformationform' %}" class="imformation " enctype="multipart/form-data ">
+            {% csrf_token %}
+            <ul class="information_list ">
+
+                <li class="li_infor ">
+                    <i class="fa-solid fa-user "></i>
+                    <input type="text " placeholder="First name " name="firstname" required>
+                    <input type="text " placeholder="Last name " name="lastname" required>
+                </li>
+
+                <li class="li_infor ">
+                    <i class="fa-solid fa-phone "></i>
+                    <input type="text " placeholder="Phone number " name="phone_number" required>
+                </li>
+                <li class="li_infor ">
+                    <label for=" ">Bron:</label>
+                    <input type="date " id="start " name="date" value="2022-09-9 " min="1980-01-01 " max="2022-9-24 " required>
+                </li>
+                <li class="li_infor ">
+                    <label for=" ">Age:</label>
+                    <input type="number " placeholder="Age " name="age" min="12 " max="99 " step="1 " value="15 " required>
+                </li>
+            </ul>
+            <ul class="information_list2 ">
+                <li class="li_infor2 ">
+                    <a href="# "><input type="file" name="profile_picture"></a>
+                    <p>create your profile</p>
+                </li>
+                <li class="li_infor3 "><img src="{% static 'img/my.jpg' %} " name="img" alt=" ">
+                </li>
+            </ul>
+
+            <button type="submit">Next</button>
+
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

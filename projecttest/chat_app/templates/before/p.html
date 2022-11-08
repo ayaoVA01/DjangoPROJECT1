@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <h1 style="background-color:blue ;width: 7rem;">UsApp</h1>
+    <div class=" box ">
+
+        <a href="{% url 'login_page' %} ">
+            <h5>LogIn</h5>
+        </a>
+        <a href="{% url 'signup_page' %} ">
+            <h5>Create an new account</h5>
+        </a>
+
+    </div>
+</body>
+
+<style>
+    h1 {
+        color: aliceblue;
+        margin-top: 3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+    }
+    
+    body {
+        background-image: url("{%static 'img/ko.jpg' %} ");
+    }
+    
+    .box {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10rem;
+    }
+    
+    h5 {
+        width: 15rem;
+        height: 2rem;
+        font-size: 20px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+    }
+    
+    h5:hover {
+        background-color: rgba(97, 97, 97, 0.103);
+    }
+    
+    a {
+        text-decoration: none;
+    }
+</style>
+
+</html>

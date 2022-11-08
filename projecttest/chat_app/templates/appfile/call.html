@@ -1,0 +1,51 @@
+{%extends 'base.html' %} {%load static%}{% block project%}
+<link rel="stylesheet" href="{% static 'css/staus.css' %}">
+<div class="call">
+
+    <div class="person_call" id="">
+        <a href="#">
+            <div class="BB_cal">
+                <div class="oo_img1_cal">
+                    <img class="img_call" src="{% static 'img/technology-tech.jpg' %}" alt="">
+                    <i class="fa-solid fa-arrow-up-right-from-square" id="right"></i>
+                </div>
+                <div class="name_num_call">
+                    <h4 class="name_call">Lao_korean college</h4>
+                    <p class="number_call">020_98009597</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'calling_page' %}">
+            <div class="c_call_search">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+        </a>
+
+    </div>
+    <div class="person_call" id="">
+        <a href="#">
+            <div class="BB_cal">
+                <div class="oo_img1_cal">
+                    <img class="img_call" src="{% static 'img/technology-tech.jpg' %}" alt="">
+                    <i class="fa-solid fa-arrow-up-right-from-square" id="right"></i>
+                </div>
+                <div class="name_num_call">
+                    <h4 class="name_call">Lao_korean college</h4>
+                    <p class="number_call">020_98009597</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'callvideo_page' %}">
+            <div class="c_call_search">
+                <i class="fa-solid fa-video"></i>
+            </div>
+        </a>
+
+    </div>
+
+
+
+
+
+
+</div>{% endblock%}

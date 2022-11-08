@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.setting {
+    display: flex;
+    margin-left: 2rem;
+    margin: 4rem;
+}
+
+.setting h4 {
+    margin-left: 2rem;
+}
+
+ul,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.list_setting {
+    display: flex;
+    margin-left: 4rem;
+    margin-bottom: 20px;
+    width: 20rem;
+    height: 4rem;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.list_setting:hover {
+    background-color: rgba(205, 205, 205, 0.11);
+}
+
+.list_setting p {
+    margin-left: 30px;
+    border-bottom: 1px solid black;
+    width: 10rem;
+    height: 2rem;
+}

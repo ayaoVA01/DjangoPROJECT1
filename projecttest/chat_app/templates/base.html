@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    /> {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+    <title>Chat app</title>
+</head>
+
+<body style="background-color:rgba(133, 131, 131, 0.226) ;">
+    <div class="box " id="jo ">
+        <div class="yu ">
+            <div class="bav__moc ">
+                <div class="bav__tu ">
+                    <p class="chat ">UsApp</p>
+                </div>
+                <div class="i__solid " id="i_solid ">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass " id="fa_search"></i>
+                    </div>
+
+                    <div class="nav__toggle " id="nav-toggle" onclick="show_enu()">
+                        <i class="fa-solid fa-ellipsis-vertical "></i>
+                    </div>
+                    <ul class="nav__item " id="nav__item ">
+                        <li class="item " id="item ">
+                            <a href="{% url 'home_page'%} "><i class="fa-brands fa-rocketchat "></i></a>
+                            <p class="p_hover ">Chats</p>
+                        </li>
+                        <li class="item ">
+                            <a href="{% url 'group_page' %} " id="navgroup "><i class="fa-solid fa-user"></i></i></a>
+                            <p class="p_hover ">contact</p>
+                        </li>
+                        <li class="item ">
+                            <a href="{% url 'status1_page'%} "><i class="fa-solid fa-spinner "></i></i></i></a>
+                            <p class="p_hover ">Status</p>
+                        </li>
+                        <li class="item ">
+                            <a href="{% url 'call1_page' %} "><i class="fa-solid fa-phone "></i></a>
+                            <p class="p_hover ">Calls</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========== ... ============= -->
+    <nav class="nav ">
+
+        <div class="nav__menu " id="nav-menu ">
+            <ul class="nav__list ">
+                <li class="nav__item_setting ">
+                    <a href="# " class="nav__link ">build group</a>
+                </li>
+                <li class="nav__item_setting ">
+                    <a href="# " class="nav__link ">block</a>
+                </li>
+                <li class="nav__item_setting ">
+                    <a href="# " class="nav__link ">driver</a>
+                </li>
+                <li class="nav__item_setting ">
+                    <a href="{% url 'setting_page' %} " class="nav__link ">setting</a>
+                </li>
+            </ul>
+            <div class="nav__close " id="nav-close ">
+                <i class="fa-solid fa-x "></i>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- =========serch ============= -->
+    <nav class="nav_search " id="nav_search ">
+        <div class="div_input ">
+            <i class="fa-solid fa-arrow-left-long " id="back "></i>
+            <input type="text " placeholder="search... ">
+        </div>
+    </nav>
+    <div class="people_search " id="people_search ">
+        <div class="person_search " id=" ">
+            <div class="BB ">
+                <div class="oo_img1 ">
+                    <img class="img_search " src="{% static 'img/technology-tech.jpg' %} " alt=" ">
+                </div>
+                <div class="name_num_search ">
+                    <h4 class="name_search ">Lao_korean college</h4>
+                    <p class="number_search ">020_98009597</p>
+                </div>
+            </div>
+            <div class="c_call_search ">
+                <i class="fa-solid fa-phone "></i>
+                <i class="fa-solid fa-video "></i>
+                <i class="fa-brands fa-rocketchat "></i>
+            </div>
+        </div>
+        <div class="person_search " id=" ">
+            <div class="BB ">
+                <div class="oo_img1 ">
+                    <img class="img_search " src="{% static 'img/technology-tech.jpg' %} " alt=" ">
+                </div>
+                <div class="name_num_search ">
+                    <h4 class="name_search ">Lao_korean college</h4>
+                    <p class="number_search ">020_98009597</p>
+                </div>
+            </div>
+            <div class="c_call_search ">
+                <i class="fa-solid fa-phone "></i>
+                <i class="fa-solid fa-video "></i>
+                <i class="fa-brands fa-rocketchat "></i>
+            </div>
+        </div>
+        <div class="person_search " id=" ">
+            <div class="BB ">
+                <div class="oo_img1 ">
+                    <img class="img_search " src="{% static 'img/technology-tech.jpg' %} " alt=" ">
+                </div>
+                <div class="name_num_search ">
+                    <h4 class="name_search ">Lao_korean college</h4>
+                    <p class="number_search ">020_98009597</p>
+                </div>
+            </div>
+            <div class="c_call_search ">
+                <i class="fa-solid fa-phone "></i>
+                <i class="fa-solid fa-video "></i>
+                <i class="fa-brands fa-rocketchat "></i>
+            </div>
+        </div>
+    </div>
+    <!-- ==============chat in =========== -->
+
+    <div class="box_stac " id="box_stac ">
+        {% for bigprofile in prof %}
+        <div class="statu_3 ">
+
+            <a href="#" id="hide_profile_post">
+                <img src="{{ bigprofile.img.url}}" alt="" class="post_i">
+            </a>
+        </div>
+        {% endfor%}
+        <div class="statu_3 ">
+            <div>
+                <h3><a href="{% url 'post_page' %} "><i class="fa-brands fa-slack "></i></a></h3>
+            </div>
+            <p class="home ">home </p>
+        </div>
+        <div class="statu_3 ">
+            <h5><a href="# "><i class="fa-solid fa-bell "></i></a></h5>
+            <p class="home">notifications</p>
+        </div>
+    </div>
+    {% block project%} {% endblock%}
+    <script>
+        // === === === == search === === ==
+
+
+        // const navSearch = document.getElementById('nav_search'),
+        //     div_input = document.getElementById('fa_search'),
+        //     input_button = document.getElementById('back'),
+        //     boxchat = document.getElementById('boxchat'),
+        //     people_search = document.getElementById('people_search')
+
+        // div_input.addEventListener('click', () => {
+        //     navSearch.classList.add('show-search'),
+        //         people_search.classList.add('people_search_show')
+
+        // });
+        // input_button.addEventListener('click', () => {
+        //     navSearch.classList.remove('show-search'),
+        //         people_search.classList.remove('people_search_show')
+        // });
+        // === === = ... === === === ===
+        // const navMenu = document.getElementById('nav-menu'),
+        //     navToggle = document.getElementById('nav-toggle'),
+        //     navClose = document.getElementById('nav-close')
+
+
+        // navToggle.addEventListener('click', () => {
+        //     navMenu.classList.add('show-menu')
+        // });
+
+        // navToggle.addEventListener('click', () => {
+        //     navMenu.classList.add('show-menu')
+        // });
+
+        // navClose.addEventListener('click', () => {
+        //     navMenu.classList.remove('show-menu')
+        // });
+
+        // const follow = document.getElementById('nav-menu')
+        // const flo = document.getElementById('click_show')
+        const navMenu = document.getElementById('nav-menu')
+            // const navToggle = document.getElementById('nav-toggle')
+        const navClose = document.getElementById('nav-close')
+
+        function show_enu() {
+            navMenu.classList.toggle('nav-menu')
+            let status = navMenu.classList.contains('nav-close')
+            if (status == true) {
+                // flo.innerText = "Following"
+                // flo.style.color = "black"
+                navMenu.classList.toggle("show_menu")
+                    // flo.style.display = "block";
+            } else {
+                // flo.innerText = "Follow"
+                // flo.style.color = null
+
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>

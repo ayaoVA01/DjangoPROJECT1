@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'css/setting.css' %}">
+    <title>setting_indlude</title>
+</head>
+
+<body>
+    <div class="setting">
+        <a href="{% url 'post_page' %}"><i class="fa-solid fa-arrow-left"></i></a>
+        <h4>Setting</h4>
+    </div>
+    <div class="include_setting">
+        <ul>
+            <li class="list_setting">
+                <i class="fa-solid fa-user"></i>
+                <a href="#">
+                    <p>Personal infomation</p>
+                </a>
+            </li>
+            <li class="list_setting">
+                <i class="fa-solid fa-bell"></i>
+                <a href="#">
+                    <p>Notifications</p>
+                </a>
+            </li>
+            <li class="list_setting">
+                <i class="fa-solid fa-lock"></i>
+                <a href="#">
+                    <p>Privecy</p>
+                </a>
+            </li>
+            <li class="list_setting">
+                <i class="fa-solid fa-shield"></i>
+                <a href="#">
+                    <p>Safety</p>
+                </a>
+            </li>
+            <li class="list_setting">
+                <i class="fa-solid fa-image"></i>
+                <a href="#">
+                    <p>Chat background</p>
+                </a>
+            </li>
+            <li class="list_setting">
+                <i class="fa-solid fa-earth-americas"></i>
+                <a href="#">
+                    <p>Languages</p>
+                </a>
+            </li>
+
+            <li class="list_setting">
+                <i class="fa-solid fa-question"></i>
+                <a href="#">
+                    <p>Help</p>
+                </a>
+            </li>
+            <li class="list_setting">
+                <i class="fa-solid fa-trash"></i>
+                <a href="{% url 'logout_page' %}">
+                    <p>Log out</p>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

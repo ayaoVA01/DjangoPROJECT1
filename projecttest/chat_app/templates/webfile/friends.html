@@ -1,0 +1,63 @@
+{%extends 'base.html' %} {%load static%} {% block project%}
+
+
+
+<div class="photos">
+    <div class="positg">
+        <a href="{% url 'group_page' %}"><i class="fa-solid fa-arrow-left"></i></i>
+        </a>
+        <p>Radios</p>
+    </div>
+
+    <div class=" name_input ">
+
+
+        <a href="# "><i class="fa-solid fa-image " id="icon_photo "></i></a>
+        <div>
+            <label class="label " for=" "><i class="fa-solid fa-user "></i></label><br>
+            <input type="text " placeholder="Name ">
+        </div>
+        <div>
+            <label for=" "><i class="fa-solid fa-phone "></i></label><br>
+            <input type="text " placeholder="Number ">
+        </div>
+        <div>
+            <label for=" "><i class="fa-solid fa-envelope "></i></label><br>
+            <input type="email " placeholder="email ">
+        </div>
+
+    </div>
+
+    <div class="name_input click_show" id="click_show">
+        <div>
+            <label class="label " for=" "><i class="fa-solid fa-location-dot "></i></label><br>
+            <input type="text " placeholder="location ">
+        </div>
+        <div>
+            <label for=" "><i class="fa-solid fa-globe "></i></label><br>
+            <input type="text " placeholder="Website ">
+        </div>
+        <div>
+            <label for=" "><i class="fa-solid fa-music "></i></label><br>
+            <a href="# ">Musie call</a>
+        </div>
+    </div>
+    <a href="#" id="hide"><i class="fa-solid fa-angle-down down_fr" id="back"></i></a>
+
+    <div class="save ">
+        <a href="# "> clear </a>
+        <a href="# ">save </a>
+    </div>
+
+    <script>
+        const hide_add_fr = document.getElementById('hide'),
+            box_add_fr = document.getElementById('click_show'),
+            back = document.getElementById('back')
+        hide_add_fr.addEventListener('click', () => {
+            box_add_fr.classList.toggle('show_addlist')
+        });
+        hide_add_fr.addEventListener('click', () => {
+            back.classList.toggle('back')
+        });
+    </script>
+</div>{% endblock%}

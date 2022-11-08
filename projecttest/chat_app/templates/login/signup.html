@@ -1,0 +1,76 @@
+<!DOCTYPE html> {%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>sign Up</title>
+</head>
+
+<body>
+
+    <div class="box_login">
+        <div class="sign_up">
+            <h4 class="hhh">sign up </h4>
+        </div>
+        <form method="POST" action="{% url 'addUser_page' %}" class="login_div">
+            {% csrf_token %}
+            <div class="email_pass">
+                <div class="class">
+                    <input type="text" placeholder="user name" name="username" class="in" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="class">
+                    <input type="email" placeholder="Email" name="email" class="in" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="class">
+                    <input type="password" placeholder="Password" name="password" class="in" required>
+
+                </div>
+                <div class="class">
+                    <input type="password" placeholder="repassword" name="repassword" required>
+                </div>
+
+
+
+
+            </div>
+
+            <button type="submit" class="login "> sign Up </button>
+
+            <div class="donot ">
+                <p>Already have an any account <a href="{% url 'login_page' %} ">login?</a></p>
+            </div>
+            <p class="log_with_singup ">or login with</p>
+            <div class="login_icon ">
+                <a href="#"><i class="fa-brands fa-google "></i></a>
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook "></i></a>
+                <a href="#"> <i class="fa-brands fa-instagram "></i></a>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+<style>
+    body {
+        background-image: url(" {% static 'img/hh.jpg' %} ");
+    }
+    
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+    
+    .class input {
+        background-color: rgb(180, 156, 119);
+    }
+</style>
+
+</html>

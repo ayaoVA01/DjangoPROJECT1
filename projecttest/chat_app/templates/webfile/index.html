@@ -1,0 +1,183 @@
+{%extends 'base.html' %} {% load static %} {% block project%}
+
+
+<div class="box1">
+
+    <div class="people_list">
+
+        <div class="chete">
+            <div id="people_list">
+                {% for pr in profile%}
+                <div class="abour_me">
+                    <a href="#detial friend.profile.id">
+                        <div class="t_img">
+                            <img class="img_me" id="p_img" src="{{pr.img.url}}" alt="">
+                            <h4 class="num_namep">{{user.username}}</h4>
+                        </div>
+                    </a>
+                    <div class="camera">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                </div>
+                {% endfor%}
+
+                <!-- ==========person============ -->
+
+                <div class="n_n_list">
+                    <div class="pp__item">
+                        <i class="fa-brands fa-searchengin"></i>
+                        <input class="inp" type="text" id="myInput" placeholder="search" title="Type in a name">
+                    </div>
+                    {% for j in chats%}
+                    <ul class="person" id="myUL">
+                        <li class="li_person">
+                            <img class="img" id="image_person" src="{{ j.pic.url}}" alt="">
+                            <a href="{% url 'home_page' %}?categoryid = {{ j.id }}" class="num_name" id="num_name">
+                                <p class="name2">
+                                    <h4 id="npe">{{j.name}}</h4>
+                                </p>
+                                <p class="number"> number</p>
+                            </a>
+                            <p class="how_list">1</p>
+                        </li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="boxchat">
+
+                <div class="one_list">
+
+                    <ul class="iname__time">
+                        <a href="#"><i class="fa-solid fa-left-long"></i></a>
+                        <li>
+                            <img class="img" id="image_person" src="{{friend.profile.pic.url}}" alt="">
+                        </li>
+                        <a href="#">
+                            <li class="n_ofperson">
+                                <h4> Name</h4>
+                                <p>time</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <li class="lasticon">
+                        <a href="{% url 'calling_page'%}"><i class="fa-solid fa-phone"></i></a>
+                        <a href="{% url 'callvideo_page'%}"><i class="fa-solid fa-video"></i></a>
+                        <a href="#"><i class="fa-solid fa-ellipsis-vertical" id="three"></i></a>
+
+                        <ul class="view_cont" id="view_cont">
+                            <a href="#" id="boxview_back"><i class="fa-solid fa-angles-left"></i></a>
+
+                            <a href="#">
+                                <li>View contact</li>
+                            </a>
+                            <a href="#">
+                                <li>Search</li>
+                            </a>
+                            <a href="#">
+                                <li>Mute notifiactions</li>
+                            </a>
+                            <a href="#">
+                                <li>Media</li>
+                            </a>
+                            <a href="#">
+                                <li>Wallpaper</li>
+
+                            </a>
+                            <a href="#" class="more_view">
+                                <li>More</li>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </ul>
+                    </li>
+                </div>
+
+                <div class="other_chat">
+                    <ul class="text_chat">
+                        <li>conversarion 1
+
+                            <p class="time__">7:04A M</p>
+                        </li>
+                        <li> conversarion 1 cvbcbcbcjjjjj
+                            <p class="time__">7:04A M</p>
+                        </li>
+                        <li> conversarion 1 cvbcbcbcjjjjj
+                            <p class="time__">7:04A M</p>
+                        </li>
+                        <li> conversarion 1 cvbcbcbcjjjjj
+                            <p class="time__">7:04A M</p>
+                        </li>
+                        <li> conversarion 1 cvbcbcbcjjjjj
+                            <p class="time__">7:04A M</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="text_message">
+                    <i class="fa-sharp fa-solid fa-face-smile emoji"></i>
+                    <div class="message">
+                        <input type="text" placeholder="Message">
+                        <i class="fa-solid fa-paperclip tow_o"></i>
+                        <i class="fa-solid fa-camera tow_p"></i>
+                    </div>
+                    <a href="#" class="send">
+                        <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- ===========MY SELF =========== -->
+    <div class="my_self" id="my_self">
+        <div class="profile">
+            <i class="fa-solid fa-arrow-left-long" id="back_icon"></i>
+            <p class="fname_f">My profile</p>
+        </div>
+        {% for pr in profile %}
+        <div class="im_profile">
+            <p class="change"> click for change profile</p>
+
+            <a href="#">
+                <img class="myself_img" src="{{pr.img.url}}" alt="image">
+                <i class="fa-solid fa-camera" id="camer"></i>
+            </a>
+        </div>
+        <div class="info_inclu">
+            <div class="fox_pro">
+                <i class="fa-solid fa-user"></i>
+                <div class="self_img">
+                    <h5>Frist name:</h5>
+                    <p class="self_name">{{user.username}}</p>
+                    <p class="can">Every body can see this name in this app</p>
+                </div>
+                <i class="fa-solid fa-pen"></i>
+            </div>
+            <div class="fox_pro">
+                <i class="fa-solid fa-circle-info"></i>
+                <div class="self_img">
+                    <h5>Some information:</h5>
+                    <p class="self_name">{{pr.dsp_profile}} some in </p>
+
+                </div>
+                <i class="fa-solid fa-pen"></i>
+            </div>
+            <div class="fox_pro">
+                <i class="fa-solid fa-phone"></i>
+                <div class="self_img">
+                    <h5>Phone number:</h5>
+                    <p class="self_name">{{pr.phone_number}}</p>
+                </div>
+                <i class="fa-sharp fa-solid fa-circle" style="color:#fff ;"></i>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}

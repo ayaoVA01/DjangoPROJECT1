@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box1_satus {
+    display: flex;
+}
+
+.div_status {
+    width: 25%;
+    height: 85vh;
+    margin-top: 4.5rem;
+    margin-left: 8rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: black;
+    padding-top: 50px;
+}
+
+.box_status {
+    display: flex;
+    align-items: center;
+}
+
+.hello {
+    color: red;
+}
+
+.box_status:hover {
+    text-shadow: 0 5px 5px black;
+}
+
+.fa-plus {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-top: 2px;
+    background-color: aqua;
+    border-radius: 45px;
+    position: initial;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    color: aliceblue;
+}
+
+.me_status {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.letter_status {
+    margin-left: 20px;
+}
+
+.letter_status p {
+    color: rgba(99, 97, 97, 0.432);
+    font-size: 12px;
+}
+
+.update {
+    margin: 20px;
+    color: rgba(99, 97, 97, 0.432);
+}
+
+.status_list {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status_list:hover {
+    text-shadow: 0 5px 5px black;
+    background-color: rgba(158, 160, 161, 0.192);
+}
+
+.status_person {
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgb(27, 13, 228);
+    border-radius: 100%;
+    text-align: center;
+}
+
+.image_perso {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-top: 2px;
+    object-fit: cover;
+}
+
+.name_of {
+    margin-left: 20px;
+}
+
+.name_of p {
+    color: rgba(99, 97, 97, 0.432);
+    font-size: 12px;
+}
+
+.box_video {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hiktop {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40rem;
+}
+
+.do_piv {
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.status_person_stat {
+    margin-left: 2rem;
+}
+
+.image_perso_status {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-top: 2px;
+}
+
+.video_person {
+    margin-left: 2rem;
+    width: 30rem;
+    height: 70vh;
+}
+
+
+/* '''''''''''show video======== */
+
+
+/* ================call=============== */
+
+.call {
+    padding-top: 6rem;
+}
+
+.person_call {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.BB_cal {
+    display: flex;
+}
+
+.oo__img1_cal {
+    margin-left: 2rem;
+}
+
+#right {
+    font-size: 15px;
+    color: rgba(4, 34, 131, 0.356);
+}
+
+.img_call {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.name_num_call {
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+.name_num_call p {
+    color: rgba(99, 97, 97, 0.432);
+}
+
+.name_num_call:hover {
+    background-color: rgba(110, 110, 110, 0.205);
+    text-shadow: 0 4px 4px black;
+}
+
+.fa-phone_:hover {
+    text-shadow: 0 4px 4px black;
+}
+
+.fa-video:hover {
+    text-shadow: 0 4px 4px black;
+}
+
+.fa-rocketchat:hover {
+    text-shadow: 0 4px 4px black;
+}

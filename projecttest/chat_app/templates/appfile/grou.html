@@ -1,0 +1,39 @@
+{%extends 'base.html' %} {% load static %} {% block project%}
+
+
+<!-- =============== group =========== -->
+<div class="box_group" id="box_group">
+    <div class="group_rop">
+
+        <h5>Select contact</h5>
+        <div class="frief">
+            <a href="{% url 'friends_page' %}">+ <i class="fa-solid fa-user"></i></a>
+            <p class="home">+ friends</p>
+            <a href="{% url 'song_page' %} " id="nav_song "><i class="fa-solid fa-music "></i></a>
+            <p class="home ">song </p>
+        </div>
+        <div class="statu_3 ">
+
+
+        </div>
+    </div>
+
+    <div class="group_list"> {% for chat_fr in chat_friends%}
+        <a href="#boxchat">
+            <div class="gro_a">
+                <div class="img_group" id="img_group">
+                    <img class="group_img" src="{% static 'img/one.jpg' %}" alt="">
+                    <ul class="num_grup">
+                        <h4 id="npe">{{chat_fr.user}}</h4>
+                        <p>some informations</p>
+                    </ul>
+                </div>
+                <div>
+                    <!-- <i class="fa-solid fa-user-group"></i> -->
+                </div>
+            </div>
+        </a>{% endfor%}
+    </div>
+
+
+</div>{% endblock %}

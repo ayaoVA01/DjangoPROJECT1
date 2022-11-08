@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.call_in {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img_in_call {
+    margin-top: 4rem;
+}
+
+.name_callin {
+    font-size: 20px;
+}
+
+.calling {
+    margin-top: 1rem;
+}
+
+.list_menu {
+    /* margin-bottom: 5rem; */
+    align-items: center;
+    background-color: rgba(97, 97, 97, 0.336);
+    height: 10rem;
+}
+
+.fa-phone {
+    background-color: red;
+    height: 2rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+
+.list_menu i {
+    margin: 2rem;
+    color: black;
+    height: 2rem;
+    width: 2rem;
+    align-items: center;
+    padding-top: .5rem;
+    border-radius: 50%;
+}
+
+.list_menu i:active {
+    color: aliceblue;
+}
+
+.list_menu i:hover {
+    background-color: rgb(104, 110, 110);
+    height: 2rem;
+    width: 2rem;
+}
+
+
+/* ==================
+ */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}

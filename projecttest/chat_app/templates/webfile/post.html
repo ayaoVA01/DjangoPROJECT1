@@ -1,0 +1,145 @@
+{%extends 'base.html' %} {%load static%} {% block project%}
+<div class="box_post">
+    <!-- <i class="fa-solid fa-angles-left"></i> -->
+    <div class="profile_alls" id="profile_alls">
+
+        <div class="profile_post" id="profile_post">
+            {% for post in prof %}
+
+            <div class="nipi">
+
+                <img src="{{post.img.url}}" alt="" class="post_profile_img">
+
+                <h4 class="name_post">{{user.username}} </h4>
+                <!-- <h4 class="name_post">{{imformation.imformation}} </h4> -->
+
+                <a href="#" id="down" class="down"><i class="fa-solid fa-chevron-down opika" id="up_down" ></i></a>
+
+
+                <div class="mypost" id="mypost">
+                    <div class="create" id="create_a">
+
+                        <a href="#" class="create_a"><i class="fa-solid fa-plus"></i></a>
+                        <a href="{% url 'setting_page' %}" class="create_a"><i class="fa-solid fa-gear"></i></a>
+                    </div>
+
+                    <ul class="information">
+                        <li class="includ_like">
+                            <p>Like
+                                <h4>40 k</h4>
+                            </p>
+                            <a href="#"><i class="fa-solid fa-caret-right"></i></a>
+                        </li>
+                        <li class="includ_like">
+                            <p>Follow me
+                                <h4>19.3 k</h4>
+                            </p>
+                            <a href="#"><i class="fa-solid fa-caret-right"></i></a>
+                        </li>
+                        <li class="includ_like">
+                            <p>Post
+                                <h4>40</h4>
+                            </p>
+                            <a href="#"><i class="fa-solid fa-caret-right"></i></a>
+                        </li>
+                        <li class="includ_like">
+                            <p>Friends
+                                <h4>1000</h4>
+                            </p>
+                            <a href="#"><i class="fa-solid fa-caret-right"></i></a>
+                        </li>
+                        <li class="includ_like">
+                            <p>Videos
+                                <h4>0 </h4>
+                            </p>
+                            <a href="#"><i class="fa-solid fa-caret-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="myfriend">
+            <div>
+                <h2>Friends</h2>
+                <p>6 Friends</p>
+            </div>
+
+            <div class="friends_photos">
+
+                <ul class="friend_d" style="margin-left:3rem ;">
+                    {% for frd in chat_post%}
+                    <li>
+                        <a href="#"><img src="{{frd.pic.url}}" alt="">
+                            <h4>{{frd.user}}</h4>
+                        </a>
+                    </li>{% endfor%}
+                </ul>
+
+                <ul class="friend_d" style="display:flex ;">
+                    <li>
+                        <img src="{% static 'img/my.jpg' %}" alt="">
+                        <h4>thisis name</h4>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/my.jpg' %}" alt="">
+                        <h4>thisis name</h4>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/my.jpg' %}" alt="">
+                        <h4>thisis name</h4>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+            <div class="see">
+                <a href="#">See all friends</a>
+            </div>
+
+        </div>
+        <div>
+            <h1>this my all post</h1>
+        </div>
+    </div>
+
+
+    <div class="div_post_person">
+        {% for p in post %}
+        <div class="list_post">
+            <div class="tr">
+                <a href="#"><img src="{% static 'img/my.jpg' %}" alt="" class="post_i"></a>
+                <h4>{{p.post_user}}</h4>
+                <a href="#">
+                    <h5>+ Follow</h5>
+                </a>
+                <p>{{p.time_post}}</p>
+            </div>
+            <div class="photo_post">
+                <p class="pp">{{p.dsp_post}}</p>
+                <div class="post_other">
+                    <img src="{{p.image_post.url}}" alt="" class="post_image">
+
+                </div>
+                <p class="date_post" style="margin-left: 2rem;">{{p.date_post}}</p>
+                <i class="fa-solid fa-plus" id="plus_follow"></i>
+                <div class="icom_postp">
+                    <p><a href="#" id="like"><i class="fa-solid fa-thumbs-up" id="like_change"></i></a>{{p.like_post}}</p>
+                    <p><a href="#" id="emoji"><i class="fa-solid fa-face-smile" id="emoji_change"></i></a>80</p>
+                    <p><a href="#"><i class="fa-brands fa-rocketchat"></i></a>10.0k</p>
+                    <p> <a href="#"><i class="fa-solid fa-share"></i></a>50</p>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+    </div>
+    <script src="{% static 'js/my.js' %}"></script>
+
+    {% endblock%}

@@ -1,0 +1,63 @@
+{%extends 'base.html' %} {%load static%} {% block project%}
+<link rel="stylesheet" href="{% static 'css/staus.css' %}">
+<div class="box1_satus">
+
+    <div class="div_status">
+        {% for pr in prof %}
+        <a href="#">
+            <div class="box_status">
+                <div class="my_status">
+                    <img class="me_status" src="{{pr.img.url}}" alt="">
+                </div>
+                <div class="letter_status">
+                    <h4>My status</h4>
+                    <p>click for update add status</p>
+                </div>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </a>
+        {% endfor%}
+        <p class="update">The last update</p>
+        <a href="#">
+            {% for statu in status %}
+            <div class="status_list" id="status_list">
+                <div class="status_person">
+                    <img class="image_perso" src="{{ statu.image_status.url }}" alt="">
+                </div>
+                <div class="name_of">
+                    <h4>{{ statu.title_status}}</h4>
+                    <p>{{ statu.date_status}}</p>
+                </div>
+            </div>
+            {% endfor%}
+        </a>
+    </div>
+    <div class="box_video" id="video_status">
+        <div class="hiktop">
+            <div class="do_piv">
+                <a href="#">
+                    <i class="fa-solid fa-x" id="x_static"></i>
+                </a>
+                <div class="status_person_stat">
+                    <img class="image_perso_status" src="{% static 'img/tep.jpg' %}" alt="">
+                </div>
+                <div class="name_of">
+                    <h4></h4>
+                    <p> Today 8:06 AM</p>
+                </div>
+            </div>
+            <div class="lats">
+                <a href="#">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </a>
+            </div>
+        </div>
+        <div class="video_status">
+            <video class="video_person" src="{% static 'img/my_vidio.mp4' %}"></video>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
